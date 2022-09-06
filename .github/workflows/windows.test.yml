@@ -1,0 +1,21 @@
+name: Window test flow
+on:
+    pull_request:
+        branches:
+            - main
+            - 'releases/**'
+jobs:
+    run-windows-test:
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js 18.8.0
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18.8.0
+            - name: Install
+              run: npm ci
+            - name: Build
+              run: npm run build:clean
+            - name: Test
+              run: npm run test
