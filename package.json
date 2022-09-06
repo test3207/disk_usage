@@ -1,0 +1,23 @@
+{
+    "name": "@test3206/disk_usage",
+    "version": "0.0.1",
+    "description": "help you to list all disks with usage info",
+    "main": "./dist/main.js",
+    "files": [
+        "./dist"
+    ],
+    "devDependencies": {
+        "@types/node": "^18.7.15",
+        "ts-node": "^10.9.1",
+        "tslib": "^2.4.0",
+        "typescript": "^4.8.2"
+    },
+    "scripts": {
+        "test": "ts-node ./src/test/main.spec.ts",
+        "clean": "ts-node ./script/clean.ts",
+        "build": "tsc --project tsconfig.json",
+        "build:clean": "npm run clean && npm run build"
+    },
+    "author": "test3207",
+    "license": "MIT"
+}

@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "downlevelIteration": true,
+        "allowJs": true,
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "lib": ["es6", "es2015", "es5"],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noImplicitReturns": true,
+        "noImplicitAny": false,
+        "outDir": "dist",
+        "plugins": [
+            {
+                "name": "tslint-language-service"
+            }
+        ],
+        "removeComments": true,
+        "sourceMap": true,
+        "strict": true,
+        "target": "es5",
+        "resolveJsonModule": true,
+        "esModuleInterop": true
+    },
+    "paths": {
+        "*": ["*", "../types/*"]
+    },
+    "exclude": ["node_modules", "dist", "./src/test/*", "./script/*"]
+}
